@@ -28,8 +28,25 @@ namespace drawTriangle
             linea2.trazarLineaVertical();
 
         }
-        
-        
+
+        public void moverTriangulo()
+        {
+            
+
+            linea1.Punto1.X += 50;
+            linea1.Punto1.Y = 0;
+
+            linea1.Punto2.X += 50;
+            linea1.Punto2.Y += 0;
+
+            linea2.Punto1.X += 50;
+            linea2.Punto1.Y = 0;
+
+            linea2.Punto2.X += 50;
+
+        }
+
+
 
     }
 }
