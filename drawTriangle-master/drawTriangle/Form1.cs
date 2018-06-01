@@ -44,10 +44,29 @@ namespace drawTriangle
         private void button2_Click(object sender, EventArgs e)
         {
 
-            triangulo1.aumentar();
+            
             triangulo1.moverTriangulo();
             
             
+            Graphics papel = this.CreateGraphics();
+
+            Pen lapiz = new Pen(Color.Red);
+
+            papel.Clear(Color.LightGray);
+            papel.DrawLine(lapiz, triangulo1.Linea1.Punto1.X, triangulo1.Linea1.Punto1.Y,
+                triangulo1.Linea1.Punto2.X, triangulo1.Linea1.Punto2.Y);
+
+            papel.DrawLine(lapiz, triangulo1.Linea2.Punto1.X, triangulo1.Linea2.Punto1.Y,
+                triangulo1.Linea2.Punto2.X, triangulo1.Linea2.Punto2.Y);
+
+            papel.DrawLine(lapiz, triangulo1.Linea1.Punto2.X, triangulo1.Linea1.Punto2.Y,
+                triangulo1.Linea2.Punto2.X, triangulo1.Linea2.Punto2.Y);
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            triangulo1.aumentar();
             Graphics papel = this.CreateGraphics();
 
             Pen lapiz = new Pen(Color.Red);
