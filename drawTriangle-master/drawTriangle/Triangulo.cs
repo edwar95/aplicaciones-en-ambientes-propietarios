@@ -46,6 +46,16 @@ namespace drawTriangle
 
         }
 
+        public void aumentar()
+        {
+            linea1.Longitud +=20;
+            linea2.Longitud +=20;
+
+            linea1.trazarLineaHorizontal();
+            linea2.trazarLineaVertical();
+
+        }
+
 
 
     }
