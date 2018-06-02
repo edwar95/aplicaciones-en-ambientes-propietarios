@@ -21,6 +21,7 @@ namespace drawTriangle
 
         public void generarLineas()
         {
+            
             linea1.Longitud = longitudA;
             linea2.Longitud = longitudB;
 
@@ -33,16 +34,16 @@ namespace drawTriangle
         {
             
 
-            linea1.Punto1.X += 50;
-            linea1.Punto1.Y = 0;
+            linea1.X1 += 50;
+            linea1.Y1 = 0;
 
-            linea1.Punto2.X += 50;
-            linea1.Punto2.Y += 0;
+            linea1.X2 += 50;
+            linea1.Y2 += 0;
 
-            linea2.Punto1.X += 50;
-            linea2.Punto1.Y = 0;
+            linea2.X1 += 50;
+            linea2.Y1 = 0;
 
-            linea2.Punto2.X += 50;
+            linea2.X2 += 50;
 
         }
 

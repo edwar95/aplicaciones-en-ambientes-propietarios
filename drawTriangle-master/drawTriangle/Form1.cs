@@ -9,7 +9,7 @@ namespace drawTriangle
 
         
         Triangulo triangulo1 = new Triangulo();
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -28,14 +28,14 @@ namespace drawTriangle
 
             triangulo1.generarLineas();
 
-            papel.DrawLine(lapiz, triangulo1.Linea1.Punto1.X, triangulo1.Linea1.Punto1.Y,
-                triangulo1.Linea1.Punto2.X, triangulo1.Linea1.Punto2.Y);
+            papel.DrawLine(lapiz, triangulo1.Linea1.X1, triangulo1.Linea1.Y1,
+                triangulo1.Linea1.X2, triangulo1.Linea1.Y2);
 
-            papel.DrawLine(lapiz, triangulo1.Linea2.Punto1.X, triangulo1.Linea2.Punto1.Y,
-                triangulo1.Linea2.Punto2.X, triangulo1.Linea2.Punto2.Y);
+            papel.DrawLine(lapiz, triangulo1.Linea2.X1, triangulo1.Linea2.Y1,
+                triangulo1.Linea2.X2, triangulo1.Linea2.Y2);
 
-            papel.DrawLine(lapiz, triangulo1.Linea1.Punto2.X, triangulo1.Linea1.Punto2.Y,
-                triangulo1.Linea2.Punto2.X, triangulo1.Linea2.Punto2.Y);
+            papel.DrawLine(lapiz, triangulo1.Linea1.X2, triangulo1.Linea1.Y2,
+                triangulo1.Linea2.X2, triangulo1.Linea2.Y2);
 
          
 
@@ -51,16 +51,17 @@ namespace drawTriangle
             Graphics papel = this.CreateGraphics();
 
             Pen lapiz = new Pen(Color.Red);
-
             papel.Clear(Color.LightGray);
-            papel.DrawLine(lapiz, triangulo1.Linea1.Punto1.X, triangulo1.Linea1.Punto1.Y,
-                triangulo1.Linea1.Punto2.X, triangulo1.Linea1.Punto2.Y);
 
-            papel.DrawLine(lapiz, triangulo1.Linea2.Punto1.X, triangulo1.Linea2.Punto1.Y,
-                triangulo1.Linea2.Punto2.X, triangulo1.Linea2.Punto2.Y);
 
-            papel.DrawLine(lapiz, triangulo1.Linea1.Punto2.X, triangulo1.Linea1.Punto2.Y,
-                triangulo1.Linea2.Punto2.X, triangulo1.Linea2.Punto2.Y);
+            papel.DrawLine(lapiz, triangulo1.Linea1.X1, triangulo1.Linea1.Y1,
+                triangulo1.Linea1.X2, triangulo1.Linea1.Y2);
+
+            papel.DrawLine(lapiz, triangulo1.Linea2.X1, triangulo1.Linea2.Y1,
+                triangulo1.Linea2.X2, triangulo1.Linea2.Y2);
+
+            papel.DrawLine(lapiz, triangulo1.Linea1.X2, triangulo1.Linea1.Y2,
+                triangulo1.Linea2.X2, triangulo1.Linea2.Y2);
 
         }
 
@@ -70,16 +71,16 @@ namespace drawTriangle
             Graphics papel = this.CreateGraphics();
 
             Pen lapiz = new Pen(Color.Red);
-
             papel.Clear(Color.LightGray);
-            papel.DrawLine(lapiz, triangulo1.Linea1.Punto1.X, triangulo1.Linea1.Punto1.Y,
-                triangulo1.Linea1.Punto2.X, triangulo1.Linea1.Punto2.Y);
 
-            papel.DrawLine(lapiz, triangulo1.Linea2.Punto1.X, triangulo1.Linea2.Punto1.Y,
-                triangulo1.Linea2.Punto2.X, triangulo1.Linea2.Punto2.Y);
+            papel.DrawLine(lapiz, triangulo1.Linea1.X1, triangulo1.Linea1.Y1,
+                triangulo1.Linea1.X2, triangulo1.Linea1.Y2);
 
-            papel.DrawLine(lapiz, triangulo1.Linea1.Punto2.X, triangulo1.Linea1.Punto2.Y,
-                triangulo1.Linea2.Punto2.X, triangulo1.Linea2.Punto2.Y);
+            papel.DrawLine(lapiz, triangulo1.Linea2.X1, triangulo1.Linea2.Y1,
+                triangulo1.Linea2.X2, triangulo1.Linea2.Y2);
+
+            papel.DrawLine(lapiz, triangulo1.Linea1.X2, triangulo1.Linea1.Y2,
+                triangulo1.Linea2.X2, triangulo1.Linea2.Y2);
 
         }
     }

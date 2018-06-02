@@ -10,33 +10,36 @@ namespace drawTriangle
     class Linea
     {
         int longitud;
+        int x1,x2,y1,y2;
 
         public int Longitud { get => longitud; set => longitud = value; }
-        internal Punto Punto1 { get => punto1; set => punto1 = value; }
-        internal Punto Punto2 { get => punto2; set => punto2 = value; }
+        public int X1 { get => x1; set => x1= value; }
+        public int Y1 { get => y1; set => y1= value; }
+        public int X2 { get => x2; set => x2= value; }
+        public int Y2 { get => y2; set => y2= value; }
 
-        Punto punto1 = new Punto();
-        Punto punto2 = new Punto();
+        
 
+       
         
 
         public void trazarLineaHorizontal()
         {
-            Punto1.X = 0;
-            Punto1.Y = 0;
+           x1 = 0;
+           y1 = 0;
 
-            Punto2.X = longitud;
-            Punto2.Y = 0;
+           x2 = longitud;
+           y2 = 0;
 
         }
 
         public void trazarLineaVertical()
         {
-            Punto1.X = 0;
-            Punto1.Y = 0;
+           x1 = 0;
+            y1 = 0;
 
-            Punto2.X = 0;
-            Punto2.Y = longitud;
+           x2 = 0;
+           y2 = longitud;
         }
 
 
