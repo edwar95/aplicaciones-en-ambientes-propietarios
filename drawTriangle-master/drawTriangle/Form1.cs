@@ -17,7 +17,7 @@ namespace drawTriangle
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void dibujarTriangulo(object sender, EventArgs e)
         {
             Graphics papel = CreateGraphics();
             Pen lapiz = new Pen(Color.Red);
@@ -41,7 +41,7 @@ namespace drawTriangle
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void moverTriangulo(object sender, EventArgs e)
         {
 
             
@@ -51,7 +51,7 @@ namespace drawTriangle
             Graphics papel = this.CreateGraphics();
 
             Pen lapiz = new Pen(Color.Red);
-            papel.Clear(Color.LightGray);
+            papel.Clear(Color.White);
 
 
             papel.DrawLine(lapiz, triangulo1.Linea1.X1, triangulo1.Linea1.Y1,
@@ -65,13 +65,13 @@ namespace drawTriangle
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void aumentaraTamaño(object sender, EventArgs e)
         {
             triangulo1.aumentar();
             Graphics papel = this.CreateGraphics();
 
             Pen lapiz = new Pen(Color.Red);
-            papel.Clear(Color.LightGray);
+            papel.Clear(Color.White);
 
             papel.DrawLine(lapiz, triangulo1.Linea1.X1, triangulo1.Linea1.Y1,
                 triangulo1.Linea1.X2, triangulo1.Linea1.Y2);
@@ -82,6 +82,24 @@ namespace drawTriangle
             papel.DrawLine(lapiz, triangulo1.Linea1.X2, triangulo1.Linea1.Y2,
                 triangulo1.Linea2.X2, triangulo1.Linea2.Y2);
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            triangulo1.disminuir();
+            Graphics papel = this.CreateGraphics();
+
+            Pen lapiz = new Pen(Color.Red);
+            papel.Clear(Color.White);
+
+            papel.DrawLine(lapiz, triangulo1.Linea1.X1, triangulo1.Linea1.Y1,
+                triangulo1.Linea1.X2, triangulo1.Linea1.Y2);
+
+            papel.DrawLine(lapiz, triangulo1.Linea2.X1, triangulo1.Linea2.Y1,
+                triangulo1.Linea2.X2, triangulo1.Linea2.Y2);
+
+            papel.DrawLine(lapiz, triangulo1.Linea1.X2, triangulo1.Linea1.Y2,
+                triangulo1.Linea2.X2, triangulo1.Linea2.Y2);
         }
     }
 
